@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    tools:background="@color/background"
+    android:layout_marginBottom="20dp">
+
+    <ImageView
+        tools:src="@color/white"
+        tools:layout_width="70dp"
+        tools:layout_height="105dp"
+        android:id="@+id/best_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            tools:text="Harry Potter and the Goblet of Fire"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/gt_sectra_fine_book"
+            android:id="@+id/best_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            tools:text="J.K. Rowling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/best_author"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:fontFamily="@font/montserrat_bold"
+                tools:text="19.99 €"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:id="@+id/best_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:fontFamily="@font/montserrat_medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/best_votes"
+                android:layout_marginEnd="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                tools:text="4.8"
+                android:id="@+id/best_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                tools:text="(2390)"
+                android:textColor="@color/grey"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:id="@+id/best_votes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
