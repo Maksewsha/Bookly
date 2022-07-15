@@ -3,6 +3,7 @@ package com.maksewsha.brookly.presentation.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -12,7 +13,7 @@ import com.maksewsha.brookly.presentation.model.CarouselPresentation
 
 class CarouselAdapter(private val carousel: List<CarouselPresentation>):
     RecyclerView.Adapter<CarouselAdapter.CarouselViewHolder>() {
-    class CarouselViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    class CarouselViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val image = itemView.findViewById<ImageView>(R.id.carousel_image)
     }
 

@@ -1,5 +1,7 @@
 package com.maksewsha.brookly.presentation.model
 
+import java.io.Serializable
+
 
 data class BestPresentation(
     val id: Int?,
@@ -8,4 +10,4 @@ data class BestPresentation(
     val price: Double?,
     val image: String?,
     val rate: RatePresentation?
-)
+) : Serializable

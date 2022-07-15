@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DevProjects/Bookly/app/src/main/res/drawable/round_outline.xml" value="0.264" />
+        <entry key="..\:/DevProjects/Bookly/app/src/main/res/drawable/round_price_button_orange.xml" value="0.264" />
+        <entry key="..\:/DevProjects/Bookly/app/src/main/res/layout/carousel_card.xml" value="0.17831813576494426" />
+        <entry key="..\:/DevProjects/Bookly/app/src/main/res/layout/detail_fragment.xml" value="0.33" />
+        <entry key="..\:/DevProjects/Bookly/app/src/main/res/layout/main_fragment.xml" value="0.358695652173913" />
         <entry key="app/src/main/res/drawable/image_back.xml" value="0.144" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/best_card.xml" value="0.22169240315755206" />
