@@ -23,8 +23,8 @@ class SimilarAdapter(private val similars: List<SimilarPresentation>) :
     override fun onBindViewHolder(holder: SimilarViewHolder, position: Int) {
         Glide.with(holder.itemView.context)
             .load(similars.get(position).image)
-            .override(70, 112)
-            .transform(RoundedCorners(7))
+            .override(200, 300)
+            .transform(RoundedCorners(50))
             .into(holder.image)
     }
 
