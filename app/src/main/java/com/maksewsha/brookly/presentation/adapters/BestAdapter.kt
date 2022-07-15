@@ -30,14 +30,15 @@ class BestAdapter(private val best: List<BestPresentation>): RecyclerView.Adapte
     override fun onBindViewHolder(holder: BestViewHolder, position: Int) {
         holder.title.text = best[position].title
         holder.author.text = best[position].author
-        holder.price.text = best[position].price.toString()
+        holder.price.text = best[position].price.toString() + " €"
         holder.score.text = best[position].rate?.score.toString()
-        holder.votesAmount.text = best[position].rate?.amount.toString()
+        holder.votesAmount.text = "(${best[position].rate?.amount.toString()})"
 
         Glide.with(holder.itemView.context)
             .load(best[position].image)
-            .override(70, 105)
-            .transform(RoundedCorners(7))
+            .override(200, 300)
+            .transform(RoundedCorners(15))
+            .centerCrop()
             .into(holder.image)
     }
 

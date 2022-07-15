@@ -1,81 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/background">
 
     <ImageView
+        android:id="@+id/brookly_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="45dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:id="@+id/brookly_logo"
         android:src="@drawable/brookly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        app:layout_constraintStart_toStartOf="@id/brookly_logo"
-        app:layout_constraintBottom_toBottomOf="@id/brookly_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
         android:src="@drawable/line_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintBottom_toBottomOf="@id/brookly_logo"
+        app:layout_constraintStart_toStartOf="@id/brookly_logo" />
 
 
     <ImageView
-        app:layout_constraintTop_toTopOf="@id/brookly_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="29dp"
         android:id="@+id/loop_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
         android:src="@drawable/loop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/brookly_logo" />
+
     <ImageView
-        android:layout_marginBottom="-3dp"
-        app:layout_constraintEnd_toEndOf="@id/loop_logo"
-        app:layout_constraintBottom_toBottomOf="@id/loop_logo"
-        android:src="@drawable/loop_stick"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-3dp"
+        android:src="@drawable/loop_stick"
+        app:layout_constraintBottom_toBottomOf="@id/loop_logo"
+        app:layout_constraintEnd_toEndOf="@id/loop_logo" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginStart="30dp"
         android:id="@+id/carousel_recycler"
-        tools:listitem="@layout/carousel_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="47dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/brookly_logo"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="47dp"/>
+        app:layout_constraintTop_toBottomOf="@id/brookly_logo"
+        tools:listitem="@layout/carousel_card" />
 
     <TextView
         android:id="@+id/best_seller"
-        android:layout_marginTop="47dp"
-        android:textColor="@color/white"
-        android:text="@string/best_seller"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_semibold"
-        app:layout_constraintTop_toBottomOf="@id/carousel_recycler"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="30dp"
-        android:textSize="18sp"/>
+        android:layout_marginTop="47dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/best_seller"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carousel_recycler" />
 
 
     <androidx.recyclerview.widget.RecyclerView
-        tools:listitem="@layout/best_card"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/best_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/best_seller"
-        android:layout_marginTop="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        tools:listitem="@layout/best_card" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

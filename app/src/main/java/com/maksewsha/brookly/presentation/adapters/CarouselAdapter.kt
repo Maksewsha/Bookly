@@ -23,8 +23,9 @@ class CarouselAdapter(private val carousel: List<CarouselPresentation>):
     override fun onBindViewHolder(holder: CarouselViewHolder, position: Int) {
         Glide.with(holder.itemView.context)
             .load(carousel[position].image)
-            .override(129, 193)
-            .transform(RoundedCorners(7))
+            .override(300, 450)
+            .transform(RoundedCorners(15))
+            .centerCrop()
             .into(holder.image)
     }
 

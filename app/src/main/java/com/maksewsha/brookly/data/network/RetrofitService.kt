@@ -10,18 +10,18 @@ import retrofit2.http.GET
 interface RetrofitService {
 
     @GET("carousel")
-    fun getCarousel(): Call<Carousel>
+    fun getCarousel(): Call<List<Carousel>>
 
     @GET("best")
-    fun getBest(): Call<Best>
+    fun getBest(): Call<List<Best>>
 
     @GET("similar")
-    fun getSimilar(): Call<Similar>
+    fun getSimilar(): Call<List<Similar>>
 
 
 
     companion object {
-        private val BASE_URL = "https://my-json-server.typicode.com/stellardiver/ebookdata"
+        private val BASE_URL = "https://my-json-server.typicode.com/stellardiver/ebookdata/"
         private var retrofitService: RetrofitService? = null
 
         fun getInstance(): RetrofitService{
