@@ -11,14 +11,16 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.maksewsha.brookly.R
 import com.maksewsha.brookly.presentation.model.CarouselPresentation
 
-class CarouselAdapter(private val carousel: List<CarouselPresentation>):
+class CarouselAdapter(private val carousel: List<CarouselPresentation>) :
     RecyclerView.Adapter<CarouselAdapter.CarouselViewHolder>() {
     class CarouselViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val image = itemView.findViewById<ImageView>(R.id.carousel_image)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarouselViewHolder {
-        return CarouselViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.carousel_card, parent, false))
+        return CarouselViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.carousel_card, parent, false)
+        )
     }
 
     override fun onBindViewHolder(holder: CarouselViewHolder, position: Int) {
@@ -26,7 +28,6 @@ class CarouselAdapter(private val carousel: List<CarouselPresentation>):
             .load(carousel[position].image)
             .override(300, 450)
             .transform(RoundedCorners(15))
-            .centerCrop()
             .into(holder.image)
     }
 

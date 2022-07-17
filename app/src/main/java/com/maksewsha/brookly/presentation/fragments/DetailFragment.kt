@@ -3,6 +3,7 @@ package com.maksewsha.brookly.presentation.fragments
 import android.os.Bundle
 import android.view.RoundedCorner
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -31,12 +32,22 @@ class DetailFragment: Fragment(R.layout.detail_fragment) {
     private lateinit var scoreDetail: TextView
     private lateinit var votesDetail: TextView
     private lateinit var similarDetail: RecyclerView
+    private lateinit var detailClose: ImageView
 
     private val mainViewModel by activityViewModels<MainViewModel>()
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putSerializable("book", fullBookInfo)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (arguments != null){
+            if(savedInstanceState != null){
+                fullBookInfo = savedInstanceState.getSerializable("book") as BestPresentation
+                return
+            }
             fullBookInfo = requireArguments().getSerializable("book") as BestPresentation
         }
         mainViewModel.fetchSimilar()
@@ -53,6 +64,11 @@ class DetailFragment: Fragment(R.layout.detail_fragment) {
         scoreDetail = view.findViewById(R.id.score_detail)
         votesDetail = view.findViewById(R.id.votes_detail)
         similarDetail = view.findViewById(R.id.similar_detail)
+        detailClose = view.findViewById(R.id.close_details)
+
+        detailClose.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
 
         Glide.with(requireContext())
             .load(fullBookInfo.image)

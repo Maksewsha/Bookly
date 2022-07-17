@@ -13,8 +13,9 @@
         tools:layout_width="70dp"
         tools:layout_height="105dp"
         android:id="@+id/best_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="70dp"
+        android:layout_height="105dp"
+        android:scaleType="fitXY"/>
 
     <LinearLayout
         android:layout_gravity="center_vertical"

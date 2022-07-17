@@ -42,8 +42,7 @@ class BestAdapter(private val best: List<BestPresentation>) :
         Glide.with(holder.itemView.context)
             .load(best[position].image)
             .override(200, 300)
-            .transform(RoundedCorners(15))
-            .centerCrop()
+            .transform(RoundedCorners(7))
             .into(holder.image)
 
         holder.itemView.setOnClickListener {
@@ -54,6 +53,7 @@ class BestAdapter(private val best: List<BestPresentation>) :
                 .supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.fragment_container_view, DetailFragment::class.java, bundle, "DetailFragment")
+                .addToBackStack("DetailFragment")
                 .commit()
         }
     }

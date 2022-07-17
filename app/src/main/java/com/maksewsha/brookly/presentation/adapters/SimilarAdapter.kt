@@ -24,7 +24,7 @@ class SimilarAdapter(private val similars: List<SimilarPresentation>) :
         Glide.with(holder.itemView.context)
             .load(similars.get(position).image)
             .override(200, 300)
-            .transform(RoundedCorners(50))
+            .transform(RoundedCorners(25))
             .into(holder.image)
     }
 

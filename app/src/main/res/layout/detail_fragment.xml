@@ -29,8 +29,8 @@
     <ImageView
         android:adjustViewBounds="true"
         android:id="@+id/detail_image"
-        android:layout_width="160dp"
-        android:layout_height="240dp"
+        android:layout_width="130dp"
+        android:layout_height="195dp"
         android:layout_marginTop="27dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,10 +38,12 @@
         tools:src="@color/white" />
 
     <TextView
+
+        android:gravity="center"
         android:id="@+id/title_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/gt_sectra_fine_book"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -169,6 +171,7 @@
         android:layout_height="wrap_content"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
         android:id="@+id/similar_detail"
         tools:listitem="@layout/carousel_card"
         android:orientation="horizontal"

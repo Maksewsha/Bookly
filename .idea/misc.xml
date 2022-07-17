@@ -11,9 +11,9 @@
         <entry key="app/src/main/res/drawable/image_back.xml" value="0.144" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/best_card.xml" value="0.22169240315755206" />
-        <entry key="app/src/main/res/layout/carousel_card.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/carousel_card.xml" value="0.3054982503255208" />
         <entry key="app/src/main/res/layout/detail_fragment.xml" value="0.1670379638671875" />
-        <entry key="app/src/main/res/layout/main_fragment.xml" value="0.2438313802083333" />
+        <entry key="app/src/main/res/layout/main_fragment.xml" value="0.22" />
         <entry key="app/src/main/res/layout/similar_card.xml" value="0.3098958333333333" />
       </map>
     </option>
